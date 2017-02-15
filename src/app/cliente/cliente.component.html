@@ -1,11 +1,15 @@
 <div class="row">
-    <h5>Lista de Clientes:</h5>
-</div>
-<div class="row">
-    <div class="collection col s4">
-        <a *ngFor="let cliente of clientes" class="collection-item" [routerLink]="[cliente.id]">ID: {{cliente.id}} - Nome: {{cliente.nome}}</a>
+    <div class="col s4">
+        <p>
+            Lista de Clientes:
+        </p>
+
+        <div class="collection">
+            <a class="collection-item" *ngFor="let cliente of clientes" [routerLink]="[cliente.id]">Id:{{cliente.id}} - Nome: {{cliente.nome}}</a>
+        </div>
     </div>
     <div class="col s8">
         <router-outlet></router-outlet>
     </div>
+
 </div>
