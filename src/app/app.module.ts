@@ -1,3 +1,4 @@
+import { ClienteModule } from './cliente/cliente.module';
 import { AuthGuard } from './guards/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { ClienteComponent } from './cliente/cliente.component';
+//import { ClienteComponent } from './cliente/cliente.component';
 
 import { LoginService } from './login/login.service';
 import { SairComponent } from './sair/sair.component';
@@ -22,7 +23,7 @@ import { SairComponent } from './sair/sair.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ClienteComponent,
+    //ClienteComponent,
     SairComponent
   ],
   imports: [
@@ -30,7 +31,8 @@ import { SairComponent } from './sair/sair.component';
     FormsModule,
     HttpModule,
     MaterializeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ClienteModule
   ],
   providers: [
     LoginService,

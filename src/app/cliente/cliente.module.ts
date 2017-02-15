@@ -1,3 +1,4 @@
+import { ClienteRoutingModule } from './cliente.routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,9 +10,9 @@ import { ClienteService } from './cliente.service';
 
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, ClienteRoutingModule],
     exports: [],
     declarations: [ClienteComponent, ClienteDetalheComponent, ClienteFormComponent],
     providers: [ClienteService],
 })
-export class clienteModule { }
+export class ClienteModule { }

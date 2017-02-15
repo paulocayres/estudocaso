@@ -10,7 +10,7 @@ import { ClienteComponent } from './cliente.component';
 
 
 
-const alunosRoutes: Routes = [
+const clienteRoutes: Routes = [
     {path: '', component: ClienteComponent, children: [
         {path: 'novo', component: ClienteFormComponent},
         {path: ':id', component: ClienteDetalheComponent},
@@ -24,10 +24,10 @@ const alunosRoutes: Routes = [
 
 
 @NgModule({
-    imports: [RouterModule.forChild(alunosRoutes)],
+    imports: [RouterModule.forChild(clienteRoutes)],
     exports: [RouterModule]
 
 })
 
 
-export class AlunosRoutingModule{}
+export class ClienteRoutingModule{}
