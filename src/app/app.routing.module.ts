@@ -1,3 +1,4 @@
+import { ClienteModule } from './cliente/cliente.module';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule, CanActivate } from '@angular/router';
 
@@ -5,7 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SairComponent } from './sair/sair.component';
-import { ClienteComponent } from './cliente/cliente.component';
+//import { ClienteComponent } from './cliente/cliente.component';
 
 
 
@@ -24,14 +25,14 @@ const appRoutes: Routes = [
      component: SairComponent,
      canActivate: [AuthGuard] 
     },
-    {path: 'cliente',
+    /*{path: 'cliente',
      component: ClienteComponent,
      canActivate: [AuthGuard] 
-    }
-    /*{path: 'alunos',
-    loadChildren: 'app/alunos/alunos.module#AlunosModule',
+    }*/
+    {path: 'cliente',
+    loadChildren: 'app/cliente/cliente.module#ClienteModule',
     canActivate: [AuthGuard] 
-    },*/
+    },
 
 
 

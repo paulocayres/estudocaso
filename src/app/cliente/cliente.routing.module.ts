@@ -1,3 +1,4 @@
+import { AuthGuard } from './../guards/auth.guard';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -12,9 +13,9 @@ import { ClienteComponent } from './cliente.component';
 
 const clienteRoutes: Routes = [
     {path: '', component: ClienteComponent, children: [
-        {path: 'novo', component: ClienteFormComponent},
-        {path: ':id', component: ClienteDetalheComponent},
-        {path: ':id/editar', component: ClienteFormComponent}
+        {path: 'novo', component: ClienteFormComponent },
+        {path: ':id', component: ClienteDetalheComponent },
+        {path: ':id/editar', component: ClienteFormComponent }
     ]
 }, 
 
