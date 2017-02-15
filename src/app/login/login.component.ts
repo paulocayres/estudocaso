@@ -24,7 +24,9 @@ export class LoginComponent implements OnInit {
   login(){
     if (this.loginService.validaUsuario(this.usuario)){
       this.label = ''
-      //this.router.navigate(['']);
+      this.router.navigate(['']);
+    } else {
+      this.label = 'Usuário e/ou senha incorretos.'
     }
   }
 

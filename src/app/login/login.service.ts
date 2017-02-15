@@ -12,13 +12,17 @@ export class LoginService {
   validaUsuario(usuario: Usuario){
     if (usuario.nome === this.usuario.nome && usuario.senha === this.usuario.senha){
       this.usuarioLogado = true;
-      console.log('logou');
+      //console.log('logou');
       return true;
 
     } else {
       this.usuarioLogado = false;
       return false;
     }
+  }
+
+  sair(){
+      this.usuarioLogado = false;
   }
 
   usuarioValidado(){

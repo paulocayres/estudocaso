@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
 
 import { LoginService } from './login/login.service';
+import { SairComponent } from './sair/sair.component';
 
 
 
@@ -21,7 +22,8 @@ import { LoginService } from './login/login.service';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ClienteComponent
+    ClienteComponent,
+    SairComponent
   ],
   imports: [
     BrowserModule,
