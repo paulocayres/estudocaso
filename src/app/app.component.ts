@@ -11,12 +11,17 @@ export class AppComponent {
   usuarioLogado: boolean;
 
   constructor(
-    private loginService: LoginService
+    private loginService: LoginService,
   ){
   }
 
   ngOnInit(){
-    this.usuarioLogado = this.loginService.usuarioValidado();
+    //this.usuarioLogado = this.loginService.usuarioValidado();
+    this.loginService.usuarioEvento.subscribe(
+      evento => this.usuarioLogado = evento
+
+    );
+
   }
   
 }
