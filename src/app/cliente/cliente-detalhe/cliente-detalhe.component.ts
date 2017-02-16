@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ClienteService } from './../cliente.service';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { Cliente } from './../cliente';;
+import { Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-cliente-detalhe',
@@ -6,10 +10,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cliente-detalhe.component.css']
 })
 export class ClienteDetalheComponent implements OnInit {
+  
+  inscricao: Subscription;
+  cliente: Cliente;
+  id: number;
 
-  constructor() { }
+  constructor(
+    private clienteService: ClienteService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.inscricao = this.route.params.subscribe(
+      (params:any) => {
+        let id = params['id'];
+        this.cliente = this.clienteService.consultaCliente(id);
+      }
+);
+    
+
+  
   }
+
 
 }
