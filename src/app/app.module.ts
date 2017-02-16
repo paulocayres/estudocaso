@@ -1,4 +1,4 @@
-import { ClienteModule } from './cliente/cliente.module';
+//import { ClienteModule } from './cliente/cliente.module';
 import { AuthGuard } from './guards/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -31,8 +31,8 @@ import { SairComponent } from './sair/sair.component';
     FormsModule,
     HttpModule,
     MaterializeModule,
-    AppRoutingModule,
-    ClienteModule
+    AppRoutingModule
+    //ClienteModule
   ],
   providers: [
     LoginService,
